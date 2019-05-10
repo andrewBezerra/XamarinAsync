@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinAsync"
+             x:Class="XamarinAsync.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Welcome Caio Anderson!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        <Entry ></Entry>
+        <Button x:Name="btnSync" Text="Iniciar Sincrono" Clicked="BtnSync_Clicked"></Button>
+        <Button x:Name="btnAsync" Text="Iniciar Assincrono" Clicked="BtnAsync_Clicked"></Button>
+    </StackLayout>
+
+</ContentPage>
