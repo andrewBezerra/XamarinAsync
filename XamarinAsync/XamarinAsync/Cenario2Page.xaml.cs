@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -20,16 +21,18 @@ namespace XamarinAsync
 
         private async void btnProcessar_Clicked(object sender, EventArgs e)
         {
+            CancellationTokenSource CancelSource = new CancellationTokenSource();
+            var token = CancelSource.Token;
+
             Stopwatch watch = new Stopwatch();
 
             watch.Start();
 
             //Iniciando Task1, Task2 e Task3 paralelamente
-            var Task1 = Tarefa(1700);
-            var Task2 = Tarefa(2000);
-            var Task3 = Tarefa(1500);
-
-            var retorno = await Task.WhenAny(Task1, Task2, Task3);
+            var Task1 = Tarefa(1700,token);
+            var Task2 = Tarefa(2000, token);
+         
+            var retorno = await Task.WhenAny(Task1, Task2);
             //Task4 iniciada e recebendo os retornos das tarefas.
             await Tarefa(retorno.Result);
 
@@ -40,10 +43,20 @@ namespace XamarinAsync
                 $"Tempo:{watch.Elapsed}",
                 "OK");
         }
-
         private async Task<int> Tarefa(int ms)
         {
             await Task.Delay(ms);
+            return ms;
+        }
+        private async Task<int> Tarefa(int ms, CancellationToken token)
+        {
+            while (!token.IsCancellationRequested || ms > 0)
+            {
+                await Task.Delay(1, token);
+                ms--;
+            }
+            if (token.IsCancellationRequested)
+                return 0;
             return ms;
         }
     }
