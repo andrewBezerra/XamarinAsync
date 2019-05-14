@@ -10,7 +10,7 @@ namespace XamarinAsync
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Cenario1Page();
         }
 
         protected override void OnStart()

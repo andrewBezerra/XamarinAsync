@@ -1,0 +1,13 @@
+C:\DEV\Xamarin\XamarinAsync\XamarinAsync\XamarinAsync\XamarinAsync\bin\Debug\netstandard2.0\XamarinAsync.deps.json
+C:\DEV\Xamarin\XamarinAsync\XamarinAsync\XamarinAsync\XamarinAsync\bin\Debug\netstandard2.0\XamarinAsync.dll
+C:\DEV\Xamarin\XamarinAsync\XamarinAsync\XamarinAsync\XamarinAsync\bin\Debug\netstandard2.0\XamarinAsync.pdb
+C:\DEV\Xamarin\XamarinAsync\XamarinAsync\XamarinAsync\XamarinAsync\obj\Debug\netstandard2.0\XamarinAsync.csprojAssemblyReference.cache
+C:\DEV\Xamarin\XamarinAsync\XamarinAsync\XamarinAsync\XamarinAsync\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\DEV\Xamarin\XamarinAsync\XamarinAsync\XamarinAsync\XamarinAsync\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\DEV\Xamarin\XamarinAsync\XamarinAsync\XamarinAsync\XamarinAsync\obj\Debug\netstandard2.0\XamarinAsync.csproj.CoreCompileInputs.cache
+C:\DEV\Xamarin\XamarinAsync\XamarinAsync\XamarinAsync\XamarinAsync\obj\Debug\netstandard2.0\XamarinAsync.AssemblyInfoInputs.cache
+C:\DEV\Xamarin\XamarinAsync\XamarinAsync\XamarinAsync\XamarinAsync\obj\Debug\netstandard2.0\XamarinAsync.AssemblyInfo.cs
+C:\DEV\Xamarin\XamarinAsync\XamarinAsync\XamarinAsync\XamarinAsync\obj\Debug\netstandard2.0\XamlC.stamp
+C:\DEV\Xamarin\XamarinAsync\XamarinAsync\XamarinAsync\XamarinAsync\obj\Debug\netstandard2.0\XamarinAsync.dll
+C:\DEV\Xamarin\XamarinAsync\XamarinAsync\XamarinAsync\XamarinAsync\obj\Debug\netstandard2.0\XamarinAsync.pdb
+C:\DEV\Xamarin\XamarinAsync\XamarinAsync\XamarinAsync\XamarinAsync\obj\Debug\netstandard2.0\Cenario1Page.xaml.g.cs

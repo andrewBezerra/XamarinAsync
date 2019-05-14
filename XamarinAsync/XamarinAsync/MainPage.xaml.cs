@@ -17,7 +17,12 @@ namespace XamarinAsync
         public string msg { get; set; }
         public MainPage()
         {
-            InitializeComponent();
+            InitializeComponentsAsync();
+        }
+
+        public async Task InitializeComponentsAsync()
+        {
+            await Task.Run(()=> InitializeComponent());
         }
 
         private async void BtnAsync_Clicked(object sender, EventArgs e)
