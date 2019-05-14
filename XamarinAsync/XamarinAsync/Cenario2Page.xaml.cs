@@ -1,21 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace XamarinAsync
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Cenario1Page : ContentPage
+    public partial class Cenario2Page : ContentPage
     {
-        public Cenario1Page()
+        public Cenario2Page()
         {
             InitializeComponent();
         }
 
-      
         private async void btnProcessar_Clicked(object sender, EventArgs e)
         {
             Stopwatch watch = new Stopwatch();
@@ -27,14 +29,14 @@ namespace XamarinAsync
             var Task2 = Tarefa(2000);
             var Task3 = Tarefa(1500);
 
-            var retornos = await Task.WhenAll(Task1, Task2, Task3);
+            var retorno = await Task.WhenAny(Task1, Task2, Task3);
             //Task4 iniciada e recebendo os retornos das tarefas.
-            await Tarefa(retornos.Sum());
+            await Tarefa(retorno.Result);
 
             watch.Stop();
 
             await DisplayAlert(
-                "Tarefas Terminaram", 
+                "Tarefas Terminaram",
                 $"Tempo:{watch.Elapsed}",
                 "OK");
         }

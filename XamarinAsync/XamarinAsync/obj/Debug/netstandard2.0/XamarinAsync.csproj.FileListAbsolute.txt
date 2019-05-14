@@ -11,3 +11,4 @@ C:\DEV\Xamarin\XamarinAsync\XamarinAsync\XamarinAsync\XamarinAsync\obj\Debug\net
 C:\DEV\Xamarin\XamarinAsync\XamarinAsync\XamarinAsync\XamarinAsync\obj\Debug\netstandard2.0\XamarinAsync.dll
 C:\DEV\Xamarin\XamarinAsync\XamarinAsync\XamarinAsync\XamarinAsync\obj\Debug\netstandard2.0\XamarinAsync.pdb
 C:\DEV\Xamarin\XamarinAsync\XamarinAsync\XamarinAsync\XamarinAsync\obj\Debug\netstandard2.0\Cenario1Page.xaml.g.cs
+C:\DEV\Xamarin\XamarinAsync\XamarinAsync\XamarinAsync\XamarinAsync\obj\Debug\netstandard2.0\Cenario2Page.xaml.g.cs
