@@ -28,12 +28,13 @@ namespace XamarinAsync
 
             watch.Start();
 
-            //Iniciando Task1, Task2 e Task3 paralelamente
+            //Iniciando Task1 e Task2 paralelamente
             var Task1 = Tarefa(1700,token);
             var Task2 = Tarefa(2000, token);
          
             var retorno = await Task.WhenAny(Task1, Task2);
-            //Task4 iniciada e recebendo os retornos das tarefas.
+            CancelSource.Cancel();
+            //Task3 iniciada e recebendo o retorno da Tarefa que terminou primeiro.
             await Tarefa(retorno.Result);
 
             watch.Stop();
@@ -50,13 +51,14 @@ namespace XamarinAsync
         }
         private async Task<int> Tarefa(int ms, CancellationToken token)
         {
-            while (!token.IsCancellationRequested || ms > 0)
+            while (!token.IsCancellationRequested && ms > 0)
             {
                 await Task.Delay(1, token);
                 ms--;
             }
             if (token.IsCancellationRequested)
-                return 0;
+                      return 0;
+            
             return ms;
         }
     }
