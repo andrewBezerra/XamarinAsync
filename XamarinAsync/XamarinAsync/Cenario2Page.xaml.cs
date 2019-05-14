@@ -33,10 +33,10 @@ namespace XamarinAsync
             var Task2 = Tarefa(2000, token);
          
             var retorno = await Task.WhenAny(Task1, Task2);
-            CancelSource.Cancel();
-            //Task3 iniciada e recebendo o retorno da Tarefa que terminou primeiro.
-            await Tarefa(retorno.Result);
 
+            //Enviando sinal de cancelamento.
+            CancelSource.Cancel();
+           
             watch.Stop();
 
             await DisplayAlert(
